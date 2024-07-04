@@ -5,26 +5,18 @@ export default function TodoList(props) {
 
     const {todos} = props
 
-    
-
-  return (
+    return (
     <ul className='main'>
         {todos.map((todo, todoIndex) => {
 
             console.log('Index is:', todoIndex)
-           
+        
            return (
-          
                 <TodoCard {...props} key = {todoIndex} index = {todoIndex}>
                     <p>{todo}</p>
-                </TodoCard>
-                
-              
-            )
-            
+                </TodoCard>           
+            )     
         })}
-        
-
     </ul>
   )
 }

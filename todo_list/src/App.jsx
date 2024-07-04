@@ -5,16 +5,13 @@ import TodoList from "./components/TodoList"
 
 function App() {
 
-  
 const [todos, setTodos] = useState([])
 const [todoValue, settodoValue] = useState([])
-
 
 function persistData(newList){
   localStorage.setItem('todos', JSON.stringify({
     todos: newList
   }))
-
 }
 
 function handleAddTodos(newTodo){
@@ -37,7 +34,6 @@ function handleEdit(index){
  
   settodoValue(valueTobeEdited)
   handleDelete(index)
-
 }
 
 useEffect(() => {
@@ -53,17 +49,12 @@ useEffect(() => {
   setTodos(localTodos)
 
 }, [])
-
-
-
-  
+ 
   return (
 
     <>
       <TodoInput todoValue = {todoValue} settodoValue ={settodoValue} handleAddTodos= {handleAddTodos}/>
       <TodoList handleEdit= {handleEdit} handleDelete= {handleDelete} todos={todos}/>
-
-    
     </>
   )
 }
