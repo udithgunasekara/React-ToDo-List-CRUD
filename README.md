@@ -1,4 +1,4 @@
 Learning Outcomes: 
-Components handling
-Usage of Props
+Components handling,
+Usage of Props,
 Use Local Storage 
